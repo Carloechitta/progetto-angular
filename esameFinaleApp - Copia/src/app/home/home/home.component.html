@@ -1,0 +1,21 @@
+<div class="container mt-3">
+    <h1 class="text-center">Pokemon List</h1>
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-center">Default Pokemon</h2>
+            <ul class="list-group mt-3">
+                <li *ngFor="let pokemon of pokemonList.results" class="list-group-item text-center">
+                    <a [routerLink]="['/pokemon', pokemon.name]" class="text-decoration-none">{{ pokemon.name }}</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-6">
+            <h2 class="text-center">Shiny Pokemon</h2>
+            <ul class="list-group mt-3">
+                <li *ngFor="let pokemon of pokemonList.results" class="list-group-item text-center">
+                    <a [routerLink]="['/shiny-pokemon', pokemon.name]" class="text-decoration-none">{{ pokemon.name }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

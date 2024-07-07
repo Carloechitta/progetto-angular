@@ -1,0 +1,12 @@
+<div class="container d-flex flex-column justify-content-center align-items-center mt-3">
+    <h1 class="mb-3">Shiny Pokemon Detail</h1>
+    <div class="card" style="width: 18rem;">
+        <img src={{shinyPokemon.sprites.front_shiny}} class="card-img-top" alt={{shinyPokemon.name}}>
+        <div class="card-body">
+          <h5 class="card-title">{{shinyPokemon.name | uppercase}}</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item" *ngFor="let ability of shinyPokemon.abilities">{{ability.ability.name | uppercase}}</li>
+          </ul>
+        </div>
+      </div>
+</div>
